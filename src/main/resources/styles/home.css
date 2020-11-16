@@ -1,0 +1,147 @@
+/*COMMON*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    background-color: #F7F7F7;
+}
+
+.grid {
+    display: grid;
+    margin: 0 3%;
+    grid-template:
+        "h h h h"
+        "nav c c c";
+}
+
+li > a {
+    text-decoration: none;
+    color: #8C898A;
+    font-size: 20px;
+}
+
+li :hover {
+    color: #96C93D;
+    transition: .2s;
+}
+
+/*FIRST HEADER*/
+header > ul {
+    padding: 20px 20px;
+}
+
+header > ul > li {
+    display: inline;
+    padding: 5px 20px;
+}
+
+header {
+    border-bottom: 1px solid #E3E3E3;
+}
+
+/*SECOND HEADER*/
+.header {
+    width: 100%;
+    display: flex;
+    grid-area: h;
+}
+
+.header > * {
+    display: flex;
+    flex-basis: 100px;
+}
+
+.header .left-box {
+    flex-grow: 1;
+}
+
+.header .right-box {
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+}
+
+.header .right-box > * {
+    flex-basis: 100px;
+}
+
+.header .right-box > input {
+    flex-grow: 6;
+
+}
+
+.header .left-box img {
+    height: 100px;
+}
+
+.header .right-box input,
+.header .right-box select {
+    border-radius: 50px;
+    height: 30%;
+    padding: 5px 5px 5px 20px;
+    font-size: 20px;
+    border: 2px solid #8C898A;
+    margin: 0 5px;
+}
+
+.header .right-box > select {
+    height: 43%;
+}
+
+.header .right-box input:focus,
+.header .right-box select:focus {
+    outline: none;
+    border-color: #96C93D;
+    transition: .2s;
+}
+
+.header > .right-box img {
+    width: 40%;
+    height: auto;
+    margin-left: 20px;
+}
+
+/*navigation*/
+.navContainer {
+    width: 100%;
+    grid-area: nav;
+}
+
+/*content*/
+.content {
+    display: flex;
+    flex-direction: column;
+    grid-area: c;
+    grid-column: 4/5;
+    width: 100%;
+}
+
+/*MIDDLE-PAGE*/
+
+.over-catalog-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.over-catalog-container > ul {
+    display: flex;
+    list-style: none;
+}
+
+.over-catalog-container > ul > li {
+    margin: 0 5px;
+}
+
+.over-catalog-container > ul > li > a {
+    font-size: .95rem;
+}
+
+.catalog {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
