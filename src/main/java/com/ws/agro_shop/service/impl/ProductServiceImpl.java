@@ -5,9 +5,6 @@ import com.ws.agro_shop.domain.Product;
 import com.ws.agro_shop.repository.ProductRepository;
 import com.ws.agro_shop.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -21,16 +18,6 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Iterable<Product> findAll() {
         return productRepository.findAll();
-    }
-
-    @Override
-    public Iterable<Product> findAll(Sort sort) {
-        return productRepository.findAll(sort);
-    }
-
-    @Override
-    public Page<Product> findAll(Pageable pageable) {
-        return productRepository.findAll(pageable);
     }
 
     @Override

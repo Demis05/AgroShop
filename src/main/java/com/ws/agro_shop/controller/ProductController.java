@@ -1,6 +1,7 @@
 package com.ws.agro_shop.controller;
 
 import com.ws.agro_shop.domain.Product;
+import com.ws.agro_shop.service.ProductService;
 import com.ws.agro_shop.service.impl.ProductServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -18,7 +19,7 @@ import java.util.Optional;
 public class ProductController {
 
     @Autowired
-    private ProductServiceImpl productService;
+    private ProductService productService;
 
     @RequestMapping(value = "{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<Product> getProduct(@PathVariable("id") Long productId) {
