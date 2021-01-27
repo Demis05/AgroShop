@@ -7,6 +7,7 @@ import com.ws.agro_shop.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -16,8 +17,8 @@ public class ProductServiceImpl implements ProductService {
     ProductRepository productRepository;
 
     @Override
-    public Iterable<Product> findAll() {
-        return productRepository.findAll();
+    public List<Product> findAll() {
+        return (List<Product>) productRepository.findAll();
     }
 
     @Override
@@ -38,5 +39,15 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void deleteById(Long aLong) {
         productRepository.deleteById(aLong);
+    }
+
+    @Override
+    public Long create(Product product) {
+        return null;
+    }
+
+    @Override
+    public void update(Product product) {
+
     }
 }

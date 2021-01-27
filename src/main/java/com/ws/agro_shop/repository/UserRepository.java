@@ -1,6 +1,6 @@
 package com.ws.agro_shop.repository;
 
-import com.ws.agro_shop.domain.Role;
+//import com.ws.agro_shop.domain.Role;
 import com.ws.agro_shop.domain.User;
 import org.springframework.data.repository.CrudRepository;
 
@@ -48,7 +48,7 @@ public interface UserRepository extends CrudRepository<User, Long> {
      * @param role user role
      * @return true if exist
      */
-    boolean existsByIdAndRoleIn(String id, Role... role);
+//    boolean existsByIdAndRoleIn(String id, Role... role);
 
 
     /**
@@ -57,7 +57,7 @@ public interface UserRepository extends CrudRepository<User, Long> {
      * @param role user role
      * @return list of UserEntities
      */
-    List<User> findUsersByRole(Role role);
+//    List<User> findUsersByRole(Role role);
 
     /**
      * Find user by id
