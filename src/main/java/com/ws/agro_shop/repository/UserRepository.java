@@ -1,6 +1,7 @@
 package com.ws.agro_shop.repository;
 
 //import com.ws.agro_shop.domain.Role;
+
 import com.ws.agro_shop.domain.User;
 import org.springframework.data.repository.CrudRepository;
 
@@ -19,11 +20,13 @@ public interface UserRepository extends CrudRepository<User, Long> {
     boolean existsById(Long aLong);
 
     @Override
-    Iterable<User> findAll();
+    List<User> findAll();
 
     @Override
     long count();
 
+//    @Override//TODO
+    void update(User user);
 
     /**
      * Fins user by its email

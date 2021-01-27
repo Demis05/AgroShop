@@ -6,6 +6,7 @@ import com.ws.agro_shop.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -30,12 +31,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Iterable<User> findAll() {
+    public List<User> findAll() {
         return userRepository.findAll();
     }
 
     @Override
     public long count() {
         return userRepository.count();
+    }
+
+    @Override
+    public void update(User user) {
+        userRepository.update(user);
     }
 }

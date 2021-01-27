@@ -2,6 +2,7 @@ package com.ws.agro_shop.service;
 
 import com.ws.agro_shop.domain.User;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface UserService {
@@ -12,7 +13,10 @@ public interface UserService {
 
     boolean existsById(Long aLong);
 
-    Iterable<User> findAll();
+    List<User> findAll();
 
     long count();
+
+    void update(User user);
+
 }
